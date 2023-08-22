@@ -1,0 +1,188 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Partenaires {% endblock %}
+
+{% block body %}
+<style>
+.blog-content{
+    margin-top: 8rem;
+   box-sizing: border-box;
+}
+
+.blog-content .blog-menu {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top:40px;
+}
+
+.blog-content .blog-menu .card {
+     width: 450px;
+    margin:25px;
+    border: 20px solid #fff;
+    overflow: hidden;
+    box-shadow: 20px 15px 35px rgba(0,0,0,0.8);
+}
+
+.blog-content .blog-menu .card .cardbox {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.blog-content .blog-menu .card .cardbox img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-content .blog-menu .card .card-text {
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+
+}
+.partenaire-title{ 
+    color: #e5caf5;
+    -webkit-text-stroke: 1px #000;
+}
+
+.card-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:  2s;
+    
+}
+
+.card:hover .card-body {
+    right: 0;
+}
+
+.card-title-top{
+    text-transform: uppercase;   
+}
+
+.card-subtitle{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-info{
+    font-size: 20px;
+    line-height: 25px;
+    margin: 35px 0;
+    font-weight: 400;
+}
+
+.card-btn{
+    color: #1f3d47;
+    background: #e5caf5;
+    padding: 8px 20px;
+    width: 120px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    
+   
+}
+
+.card-btn a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+   
+   
+
+
+
+
+
+</style>
+<div class="blog-content">
+    <h1 class="partenaire-title display-4  mx-5  text-center rounded shadow-lg">Partenaires</h1>
+
+    <div class="blog-menu " > 
+        <div class="card "> 
+            <div class="cardbox">
+                <img src="{{asset('assets/images/mabekazen2.jpg')}}" class=" " alt="" > 
+            </div>          
+           
+            <div class="card-text" >
+                    <h4 class="card-title ">Mabekazen</h4>
+                {# <p class="card-text">Didier vous transmets son savoir-faire et sa bonne énergie pour vous apporter bien-être, détente profonde et augmenter votre force vitale..</p>
+                <a href="https://www.mabekazen.fr/" class="btn btn-primary mx-auto " style="background: linear-gradient(blue, pink);">Visiter</a> #}
+            </div>
+
+            <div class="card-body">
+                <h3 class="card-title-top">Mabekazen</h3>
+                <p class="card-sub-title">Massage thaï- Reflexologie</p>
+                <p class="card-info">Didier vous transmets son savoir-faire et sa bonne énergie pour vous apporter bien-être, détente profonde et augmenter votre force vitale...</p>
+
+                <button class="card-btn "><a href="https://www.mabekazen.fr/">Visiter</a></button>
+            </div>
+                        
+        </div>
+
+        <div class="card"> 
+            <div class="cardbox">
+                <img src="{{asset('assets/images/coconkimia.jpg')}}" class=" " alt="" > 
+            </div>        
+            
+            <div class="card-text" >
+                    <h4 class="card-title ">Cocon Kimia <Leg></Leg></h4>
+                {# <p class="card-text">Laurène a une pratique aux effets magiques, qui rééquilibre vos énergies. Le bien être absolu ! Massages bien-être, ateliers parents-enfants, ateliers (...).</p>
+                <a href="https://www.coconkimia.fr/" class="btn btn-primary mx-auto " style="background: linear-gradient(blue, pink);">Visiter</a> #}
+            </div>
+
+            <div class="card-body">
+                <h3 class="card-title-top">Cocon Kimia</h3>
+                <p class="card-sub-title">Massothérapeute</p>
+                <p class="card-info">Laurène a une pratique aux effets magiques, qui rééquilibre vos énergies. Le bien être absolu ! Massages bien-être, ateliers parents-enfants, ateliers (...).</p>
+
+                <button class="card-btn "><a href="https://www.coconkimia.fr">Visiter</a></button>
+            </div>
+                        
+        </div> 
+
+        {# <div class="card col-lg-6 h-100 bg-light"> 
+                        
+            <img src="{{asset('assets/images/carolinelenec.jpg')}}" class="d-block " alt="" > 
+            <div class="card-body" >
+                    <h4 class="card-title mt-5">Anaïs Srebnogora</h4>
+                {# <p class="card-text">Psychologue TCC - IR . Installée depuis 2021 en tant que psychologue TCC à Lille (plus précisément à Marquette-lez-Lille et Seclin), je suis spécialisée dans les thérapies comportementales et cognitives, ainsi que dans l’intelligence relationnelle (équivalent EMDR). (...)</p> #}
+                {# <a href="https://www.anais-srebnogora-psychologue.fr/" class="btn btn-primary mx-auto " style="background: linear-gradient(blue, pink);">Visiter</a> 
+            </div>
+                        
+        </div>  #}
+
+
+        {# <div class="card col-lg-6 h-100 bg-light"> 
+                        
+            <img src="{{asset('assets/images/image1.jpg')}}" class="d-block w-100 h-50" alt="" > 
+            <div class="card-body" >
+                    <h4 class="card-title mt-5"></h4>
+                {# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>#}
+                {# <a href="" class="btn btn-primary mx-auto " style="background: linear-gradient(blue, pink); ">Voir</a> 
+            </div>
+                        
+        </div>   #}
+                 
+    </div>
+</div>
+
+{% endblock %}

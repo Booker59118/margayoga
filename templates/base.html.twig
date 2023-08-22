@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Abel&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+    {# Feuilles de styles #}
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/_navbar.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/_footer.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/styles.css')}}">
+
+        {% block stylesheets %}{% endblock %}
+
+        
+    </head>    
+            
+        
+    <body>
+          
+        <header>
+            {% block header %}
+                {% include "incs/_navbar.html.twig" %}
+            {% endblock %}
+        </header>
+
+       
+
+
+        {% block body %}
+   
+       
+           
+        
+        
+        
+        
+        {% endblock %}
+
+         {% include "incs/_footer.html.twig" %}
+
+        {% block javascripts %}
+            <script src="{{asset('assets/js/script.js')}}"></script>
+            {# <script src="https://kit.fontawesome.com/c8c43e2d03.js" crossorigin="anonymous"></script> #}
+      
+             
+        {% endblock %}
+        
+    </body>
+
+   
+</html>

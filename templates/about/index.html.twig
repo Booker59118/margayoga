@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue{% endblock %}
+{% block body %} 
+<style>
+    .about-title{
+    margin-top: 8rem;
+    color: #e5caf5;
+    -webkit-text-stroke: 1px black;
+   
+}
+    .card{
+        margin: 15%;
+    }
+</style>
+
+<h1 class="about-title display-4  mx-5  text-center rounded shadow-lg">Présentation</h1>
+
+<ol class="breadcrumb  ps-3 py-3 fs-5 ms-5 " >
+    <li class="breadcrumb-item " ><a href="{{path('app_home')}}">Accueil</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Présentation</li>
+</ol> 
+<div class="card mb-3 rounded shadow-lg" style="max-width: 100%;">
+    
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{asset('assets/images/image2.jpg')}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">Karine Destobbeleer, professeur de Yoga</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae hic consequatur officia modi quasi consectetur distinctio omnis impedit cumque in dignissimos tenetur molestiae sapiente, dolorem eos eaque, dolore, necessitatibus sed.
+                Fugit, tempora similique. Adipisci, nulla. Cum, dolore? Quia enim ducimus ex debitis deleniti saepe odio fugiat. Delectus expedita minus ex consequatur quaerat atque? Eum rerum repellendus quia accusantium similique officia.
+                Voluptatem recusandae in voluptate nisi similique alias quis ipsa rerum ex quo ut numquam, amet eos minus porro modi perspiciatis odit, blanditiis eum tempore facilis. Consectetur accusamus modi ipsum voluptates!
+                Animi maxime aliquam aut totam architecto excepturi quas sit, similique iste recusandae dicta sunt pariatur veritatis alias temporibus eligendi commodi odio dolores necessitatibus minus laboriosam debitis accusamus obcaecati officia! Explicabo!
+                Officiis architecto modi error. Perspiciatis qui dicta totam ullam nobis neque, commodi consequuntur debitis eos modi, iure culpa ipsum ratione, quasi sed! Iusto veritatis sed eligendi qui magni excepturi delectus!
+                Velit qui quam vel nesciunt! Et voluptate nemo, hic ipsum obcaecati voluptatum culpa nobis commodi fuga dignissimos sunt excepturi consequuntur ea maiores laborum necessitatibus labore inventore, qui consequatur quidem impedit!
+                Ut quidem reprehenderit consequatur culpa expedita adipisci debitis ullam nobis porro molestias, laudantium exercitationem tempora accusantium fugiat at ea in cum laboriosam, id incidunt! Officiis nisi animi voluptate atque doloremque.
+                Culpa velit molestias vitae consequatur itaque iusto, obcaecati dolore beatae rerum voluptates amet neque maiores nesciunt minus, facere vel? Numquam explicabo quibusdam optio dolore quia laudantium rerum rem sed deserunt.
+                Sunt deleniti molestias iste molestiae, ullam asperiores fuga a. Ab incidunt voluptates nulla natus aperiam, quisquam, nemo magnam odit neque eius repellendus odio saepe molestiae, architecto sed ipsam numquam! Cum.
+                Modi quisquam harum soluta perspiciatis ipsum fugiat optio quidem, deleniti distinctio illo. Dolorem ipsa ex laudantium magni molestias sint architecto molestiae delectus nobis impedit? Excepturi corporis iusto doloremque eligendi distinctio?</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+{% endblock %}

@@ -1,0 +1,113 @@
+header{
+    position:fixed;
+    top:0%;
+    left:0%;
+    /* padding:20px 10px; */
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.1s;
+}
+
+.navbar{
+    width: 100%;
+  
+}
+
+.container-fluid{
+    margin: 0 15%;
+}
+.navbar-brand{
+    font-family: 'Macondo Swash Caps', cursive;
+    color: #e5caf5 !important;
+    -webkit-text-stroke: 1px black;
+    font-size: 38px;
+    font-weight: bold;
+    /* margin-left: 50px; */
+}    
+
+.navbar-collapse{
+    justify-content: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+    
+}
+
+.nav-item a{
+    color: #000;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+.nav-item a:hover{
+    color: #e5caf5;
+    /* -webkit-text-stroke: 1px black; */
+}
+
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+  
+}
+
+.dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+
+.dropdown-menu ul li{
+    width: 150px;
+    padding: 10px 0;
+}
+
+.dropdown-menu ul li a:hover{
+    color: #e5caf5;
+}
+
+.navbar-collapse ul li a{
+    transition: all 0.8s;
+}
+
+.navbar-collapse ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100;
+
+}
+
+header.sticky {
+    top: 0%;
+}
+
+header.sticky .navbar{
+    background: #82bbde !important;
+}
+
+header.sticky .navbar-brand{
+    color: #fff ! important;
+}
+
+header.sticky .nav-item a{
+    color: #fff ! important;
+}
+
+header.sticky .nav-item a svg{
+    color: #fff ! important;
+}
+
+
+header.sticky .dropdown-menu{
+    background-color: #88bbde;
+}

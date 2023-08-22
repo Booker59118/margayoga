@@ -1,0 +1,288 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Photos{% endblock %}
+
+
+{% block body %}
+<style>
+
+    {# .photo-content .photo-title {
+        color: #e5caf5;
+        -webkit-text-stroke: 1px black;
+    }
+    .photo-content{
+        margin-top: 10%;
+        margin-bottom: 5%;
+        
+      
+    }
+
+    .container{
+        max-width: 800px;
+        height: 300px;.
+        margin: 0 auto;
+        padding: 50px;
+    }
+
+
+    .slider img{
+        width: 100%;
+        display: none;
+    }
+
+    img.active{
+        display: block;
+        animation: fade 0.8s;
+    } #}
+
+    {# @keyframes fade {
+        from { 
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+
+    }
+     #}
+ .photo-content{
+    margin-top: 8rem;
+   box-sizing: border-box;
+}
+
+.photo-content .photo-menu {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    margin-top:40px;
+   
+}
+
+.photo-content .photo-menu .photo{
+     width: 450px;
+    margin:25px;
+    border: 20px solid #fff;
+    overflow: hidden;
+    box-shadow: 20px 15px 35px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.photo-content .photo-menu .photo .photo-box {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.photo-content .photo-menu .photo .photo-box img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.photo-content .photo-menu .photo .photo-text {
+    text-align: center;
+    font-weight: 300px;
+    color: #111;
+
+}
+.photo-title{ 
+    color: #e5caf5;
+    -webkit-text-stroke: 1px #000;
+}
+
+.photo-body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:  2s;
+    
+}
+
+.photo:hover .photo-body {
+    right: 0;
+}
+
+.photo-title-top{
+    text-transform: uppercase;   
+}
+
+.photo-subtitle{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.photo-info{
+    font-size: 20px;
+    line-height: 25px;
+    margin: 35px 0;
+    font-weight: 400;
+}
+
+.photo-btn{
+    color: #1f3d47;
+    background: #e5caf5;
+    padding: 8px 20px;
+    width: 120px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    
+   
+}
+
+.photo-btn a{
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+</style>
+
+<div class="photo-content">
+    <h1 class="photo-title  display-4  mx-5  text-center rounded shadow-lg">Photos</h1>
+
+    <ol class="breadcrumb  ps-3 py-3 fs-5 ms-5 " >
+        <li class="breadcrumb-item " ><a href="{{path('app_home')}}">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Photos</li>
+     </ol> 
+
+    
+
+
+    <div class="photo-menu " >
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo1.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo2.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo3.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo4.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo5.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo6.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo7.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo8.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo9.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+
+            <div class="photo "> 
+                <div class="photo-box">
+                    <img src="{{asset('assets/images/photos/photo10.jpg')}}" class=" " alt="" > 
+                </div>          
+            </div>
+                
+            
+
+       
+
+            
+                
+    </div>
+</div>
+        
+
+  
+
+<script>
+    {# const items = document.querySelectorAll('img');
+    const nbSlide = items.length;
+    const suivant = document.querySelector('.right');
+    const precedent = document.querySelector('.left');
+    let count = 0;
+
+    function slideSuivante(){
+        items[count].classList.remove('active');
+
+        if(count < nbSlide - 1){
+            count++;
+        } else {
+            count = 0;
+        }
+
+        items[count].classList.add('active')
+        
+    }
+
+    suivant.addEventListener('click' , slideSuivante)
+
+
+    function slidePrecedente(){
+        items[count].classList.remove('active');
+
+        if(count > 0){
+            count--;
+        } else {
+            count = nbSlide - 1;
+        }
+
+        items[count].classList.add('active')
+       
+
+
+    }
+    precedent.addEventListener('click' , slidePrecedente)
+
+
+    funtion keyPress(e){
+        if(e.keyCode === '37'){
+            slidePrecedente();
+        } else if(e.keyCode === 39){
+            slideSuivante();
+        }
+    }
+    document.addEventListener('keydown', keyPress) #}
+</script>
+    
+{% endblock %}

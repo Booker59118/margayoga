@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+
+
+{% block body %}
+
+<style>
+.contact-title{
+    margin-top: 8rem;
+    color: #e5caf5;
+    -webkit-text-stroke: 1px black;
+   
+}
+
+.contact-form{
+    box-sizing: border-box;
+    border-radius:5px;
+    background-color:#fff;
+    box-shadow: 1px 10px 10px 5px grey;
+    max-width: 550px;
+    padding:20px;
+    width: 100%;
+    margin-left: 35%;
+}
+
+.form-label{
+    color: black;
+    
+}
+
+.form-control{
+    
+    border: 1px solid black;
+   {# width: 50%; #}
+}
+
+.contact-link{
+    display: flex;
+    flex-direction: row;
+    margin: 5rem;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+.contact-text ul li a{
+    color: #000;
+    text-decoration: none;
+    }
+
+.contact-map{
+    margin-left: 30rem ! important;
+}
+
+.btn{
+    background: linear-gradient(blue, pink);
+    color: #fff;
+}
+</style>
+
+
+<h1 class="contact-title display-4  mx-5  text-center rounded shadow-lg">Contact</h1>
+
+    <ol class="breadcrumb  ps-3 py-3 fs-5 ms-5 " >
+        <li class="breadcrumb-item " ><a href="{{path('app_home')}}">Accueil</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+    </ol> 
+
+     {% if app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ app.flashes('success')[0] }}
+        </div>
+    {% endif %}
+
+
+
+    <div class="contact-form">
+        {{form_start(form)}}
+            {{form(form)}}
+        {{form_end(form)}}
+    </div>
+   
+
+    <div class=" contact-link">
+        <div class="contact-text">
+            <ul>
+                <li>
+                    <h5>Adresse</h5>
+                    
+                    <p><i class="fa-solid fa-location-dot"></i>   96 rue d'Ypres, 59520 Marquette-Lez-Lille</p>
+                </li>        
+                      
+                <li>
+                   <h5>Téléphone</h5> 
+                   <p><a href="tel:06.73.88.56.61"><i class="fa-solid fa-phone"></i> 06.73.88.56.61</a></p>
+                </li>
+                <li>
+                    <h5>E-mail</h5>
+                    <p><a href="mailto:karine.desto@hotmail.fr"><i class="fa-solid fa-envelope"></i>  karine.desto@hotmail.fr</a></p> 
+                </li>
+            </ul>
+        </div>
+        <div class="contact-map ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.5006419398574!2d3.047449576348037!3d50.67353147163574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c32af974243da3%3A0x3bf4968d2af37322!2s96%20Rue%20d&#39;Ypres%2C%2059520%20Marquette-lez-Lille!5e0!3m2!1sfr!2sfr!4v1685481348169!5m2!1sfr!2sfr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+        </div>
+    </div>
+
+{% endblock %}

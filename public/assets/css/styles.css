@@ -1,0 +1,52 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+  
+
+  }
+
+  body{
+    background: #f1f1f1;
+    font-family: 'Poppins';
+  }
+
+  .banner{
+  
+    width: 100%;
+    min-height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/images/banner_2.jpg);
+    background-size: cover;
+   
+
+}
+
+.banner .contenu{
+  max-width: 70%;
+  text-align: center;
+  color: #fff;
+
+}
+
+.banner .contenu a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+#container{
+
+  width: 100%;
+}
+
+.img-fluid{
+  width: 100%;
+}
+
+/****************************************************************************************************************************/
